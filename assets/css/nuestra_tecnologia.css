@@ -1,0 +1,48 @@
+.tec-modulos {
+    width: 100%;
+    height: 100vh;
+    background-size: cover
+}
+
+.tec-nuestra {
+    width: 100%;
+    height: 100vh;
+    background-size: cover
+}
+
+.nuestra-tec-container-mb {
+    display: none;
+}
+
+.btn-cocop {
+    width: 15%;
+    max-width: 80px;
+    position: fixed;
+    margin: lef;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+@media (max-width: 425px) {
+    .nuestra-tec-container {
+        display: none;
+    }
+
+    .nuestra-tec-container-mb {
+        display: flex;
+        flex-direction: column;
+    }
+    
+        .tec-modulos-mb {
+        width: 100%;
+        height: 100vh;
+        background-size: cover
+    }
+
+    .tec-nuestra-mb {
+        width: 100%;
+        height: 100vh;
+        background-size: cover
+    }
+}

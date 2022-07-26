@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body style="margin: 0!important">
+    <div class="container-video">
+        <video controls autoplay muted id="myVideo" width="100%" height="100%">
+            <source src="./assets/video/animacion_web_escritorio.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="container-video-mb">
+        <video controls autoplay muted id="myVideo-mb" width="100%" height="100%">
+            <source src="./assets/video/animacion_web_mobile.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script>
+        document.getElementById("myVideo").addEventListener("ended", function () {
+            location.href = 'home.html'
+        });
+        document.getElementById("myVideo-mb").addEventListener("ended", function () {
+            location.href = 'home.html'
+        });
+    </script>
+</body>
+</html>

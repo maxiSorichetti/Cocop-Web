@@ -1,0 +1,981 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #EBEBEB;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url(../fuentes/GothamRnd-Bold.otf);
+}
+
+@font-face {
+    font-family: Gotham book;
+    src: url(../fuentes/GothamRnd-Book.otf);
+}
+
+
+@font-face {
+    font-family: Gotham Med;
+    src: url(../fuentes/GothamRnd-Medium.otf);
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+}
+
+header, .nav, .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    font-family: Gotham book;
+    position: relative;
+    background: rgba(255, 255, 255, 0.178);
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.section-3 {
+    display: none;
+}
+
+.carousel{
+    width: 70%;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ .menu {
+    width: 650px;
+}
+
+.link-nav {
+    margin-left: 10px;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.menu li a:hover {
+    color: #3b3b3b;
+}
+
+.nav input {
+    width: 90px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.logo_menu{
+    width: 10%;
+}
+
+.nav span {
+    
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ span {
+    background-color: #f974a1;
+}
+
+.nav span:nth-child(2) {
+    transform: translateY(-8px);
+}
+
+.nav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.nav span:nth-child(3) {
+    transform: translateY(8px);
+}
+
+.nav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.contenedor-inicio{
+    width: 100%;
+    height: 100vh;
+    background: rgb(31,72,153);
+    background: linear-gradient(180deg, rgba(31,72,153,1) 0%, rgba(186,221,244,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-comunidad{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(31, 72, 153, 1) 0%, rgba(186, 221, 244, 1) 100%);
+    display: flex;
+}
+
+.contenedor-tecnology{
+    width: 100%;
+    height: 100vh;
+    background: rgb(187,222,245);
+    background: linear-gradient(180deg, rgba(187,222,245,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-app{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/fondo_descarga.jpg) ;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    object-fit: contain;
+}
+
+.contenedor-contacto{
+    width: 100%;
+    height: 100vh;
+    background-color:#1f4899;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+
+.container-TyC {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    font-family: Gotham;
+    font-size: 1.2em;
+}
+
+.conditions {
+    background-color: white;
+    margin-top: -60px;
+    box-shadow: 0 0 8px 0px #bbbbbb;
+    padding: 24px;
+    border-radius: 30px;
+    margin-bottom: 60px;
+}
+
+.conditions p {
+    font-size: 11px !important;
+    text-align: justify;
+    font-family: sans-serif;
+}
+
+.divDivMejorar {
+    top: 78% !important;
+}
+
+.conditions h4 {
+    font-size: 16px !important;
+    font-family: sans-serif !important;
+    font-weight: bold;
+}
+
+.conditions h5 {
+    font-size: 14px !important;
+    font-family: sans-serif !important;
+    font-weight: bold;
+}
+
+@media (max-width:700px) {
+
+    .logo-menu {
+        width: 32%;
+    }
+
+    header{
+        justify-content: start;
+    }
+
+    header, .nav, .menu {
+        flex-direction: column;
+        font-size: 0.9em;
+    }
+
+    .texto_convivir{
+        width: 100%;
+        font-family: Gotham med;
+        color: #fff;
+        text-align: center;
+        text-shadow: 1px 1px 1px #000000;
+        margin-top: 8%;
+    }
+
+
+    .card p{
+        font-size: .9em;
+        padding: 10px;
+    }
+
+    .descarga{
+    flex-direction: column-reverse;
+    }
+    
+    .codigo{
+        display: none;
+    }
+
+    .puerta img{
+        width: 35%;
+        padding-top: 20px; 
+        
+    }
+
+    .conteiner-formulario{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*aca comienza el MAIN */
+
+.inicio{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.titulo{
+    width: 50%;  
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    overflow: hidden;
+    order: 1;
+}
+
+.titulo h1{
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Gotham;
+    font-size: calc( 1.9em + 1vw);
+    padding: 10px;
+    margin-top: 10%;
+}
+
+.titulo h2{
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+    display: flex;
+    justify-content: center;
+    font-family: Gotham book;
+    text-align: center;
+    font-size: 2em;
+    padding: 10px;
+}
+
+.botonera_descarga{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    order: 2;
+    object-fit: contain; 
+}
+
+.boton {
+    width: 100%;
+    min-width: 210px;
+    margin-top: 10%;
+    padding: 15px 24px;
+    border-radius: 30px;
+    border: none;
+        margin: 10px;
+    font-family: Gotham med;
+    font-weight: bold;
+}
+
+.descarga-cocop {
+    background: linear-gradient(90deg, rgba(32, 71, 153, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    color: #fff;
+}
+
+.descarga-cocop-app {
+    width: 20%;
+}
+
+.inicio-sesion {
+    background-color: #fff;
+    color:#000000
+}
+
+.boton_{
+    display: flex;
+    justify-content: center; 
+}
+
+.boton_descarga:hover{
+    width: 105%;
+    transition: .5s;
+    object-fit: contain;   
+}
+
+.ventanas {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 3;
+    object-fit: contain;   
+}
+
+.ventanas img{ 
+    width:  100%;
+    object-fit: contain;   
+} 
+
+/*aca comienza  COMUNIDAD*/
+
+.contenedor-comunidades{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-image: url(../img/fondo_pag_2.png);
+    }
+
+.texto_convivir{
+    width: 100%;
+    font-family: Gotham med;
+    font-size: calc(1.2em + 1vw);
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+.imagen_fondo{
+    width: 100%;
+    object-fit: contain;
+}
+.imagen_fondo img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.img-section-2-mobile {
+    display: none;
+}
+
+/*aca comienza TECNOLOGIA PARA PARTICIPAR*/
+
+.contenedor-tecnologia{
+    width: 100%;
+    height: 82%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.titulo_tecnologia{
+    width: 100%;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    font-family: Gotham ;
+    font-size: calc( 1.5em + 1vw);
+    margin-top: 5%;
+}
+
+.contenedor_card{  /*esto contiene las 3 card de tecnologia*/
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.card{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px;
+}
+
+.container {
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    font-family: Gotham ;
+    font-size: 1.2em;
+    margin-top: 100px;
+}
+
+.container .card {
+    max-width : 280px;
+    height : 200px;  
+    background-color : rgba(255, 255, 255, 0);
+    border: none;       
+    display : flex;
+    flex-direction : column;
+    transition : 0.3s ease-in;
+    border-radius : 40px;
+    cursor: pointer;
+}
+
+.container .card:hover {
+    height: 340px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 20px rgb(0 0 0 / 50%);
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .card .image {
+    position : relative;
+    width : 100%;
+    border-radius: 40px;
+    top : -40%;
+}
+
+.container .card .image img {
+    max-width : 100%;
+    border-radius : 15px;
+}
+
+.container .card .content {
+    position : relative;
+    top : -140px;
+    padding : 10px 15px;
+    color : rgb(0, 0, 0);
+    text-align : center;
+    visibility : hidden;
+    transition : 0.3s ease-in-out;
+}
+
+.container .card:hover .content {
+    visibility : visible;
+    opacity : 1;
+    transition-delay: 0.2s;     
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;
+    font-family: Gotham;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 0px;
+    text-align: center;
+}
+
+/*aca comienza DESCARGA COCOP*/
+
+.contenedor_descarga {          
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+    background-color: coral;
+}
+
+.titulo_descarga{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: Gotham;
+}
+
+.titulo_descarga_1 {
+    font-size: calc(1.5em + 1vw);
+}
+
+.titulo_descarga_2 {
+    font-size: calc(1.2em + 1vw);
+}
+.secciones {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 170px;
+    overflow: hidden;
+}
+
+.descarga{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+}
+
+.codigo{
+    width: 30%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 3;
+}
+
+.boton-descarga{
+    width: 40%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+}
+
+.boton-descarga img{
+    width: 100%;
+}
+
+.puerta {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+
+/*aca comienza CONTACTO*/
+
+.pagina_contacto {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.titulo_comunicate {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+
+.titulo_comunicate a{
+    font-size: calc( 1.5em + 1vw);
+    font-family: Gotham;
+    padding-top: 60px;  
+}
+
+/*aca comienza el formulario de contacto*/
+
+.conteiner-formulario{
+    width: 100%;
+    display: flex;
+    padding: 0 20%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1f4899;
+}
+
+.contenido{
+    width: 100%;
+}
+
+.formulario{
+    width: 100%;
+    height: 100%;
+}
+
+.contact {
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+}
+
+.contact label, .contact input  {
+    display: block;
+    width: 100%;
+    border-radius: 10px; 
+    text-indent: 15px;
+}
+
+.contact textarea{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px; 
+    text-indent: 15px;
+} 
+
+
+.contact label {
+    font-weight: 700;
+}
+
+.contact input:not([type='submit']), .contact textarea {
+    border: none;
+    margin-bottom: 10px;
+    font-size: 20px;
+    outline: none;
+    color: black;
+    font-size: Gotham med;
+    text-indent: 15px;
+}
+
+.contact textarea {
+    min-height: 100px;
+}
+
+input[type='submit'] {
+    border: none;
+    width: 250px;
+    height: 50px;
+    padding: 10px;
+    background: rgb(32,71,153);
+    background: linear-gradient(90deg, rgba(32,71,153,1) 0%, rgba(0,212,255,1) 100%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: Gotham med;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.boton_env{
+    display: flex;
+    justify-content: center;
+}
+
+/*botonera red social*/
+
+.botones{
+    padding-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+    
+.botones img{
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    width: 100%;
+    height: 130px;
+    background-color: #1f4899;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.marca {
+    color: #fff;
+    display: flex;
+    font-size: 1em;
+    font-family: Gotham book;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.marca-a {
+    color:#fff;
+}
+.marca-a:hover {
+    color:#fff;
+}
+
+.marca h5 {
+    font-weight: bold;
+}
+
+.marca-links  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pliage {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.pliage-logo {
+    width: 40%;
+    height: 40%;
+}
+
+@media (max-width: 1350px) {
+    .codigo {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .inicio {
+        width: 100%;
+        height: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .titulo{
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+        order: 1;
+    }
+
+    .botonera_descarga {         
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        order: 3;
+        object-fit: contain; 
+    }
+
+    .ventanas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 2;
+        object-fit: contain;
+    }
+
+    .descarga {
+        flex-wrap: nowrap;
+        padding: 0 5%;
+    }
+
+    .codigo { 
+        display: none;
+    }
+
+    .puerta {
+        order: 2;
+        width: 100%;
+
+    }
+
+    .boton-descarga { 
+        order: 1;
+        width: 100%;
+    }
+}  
+
+
+@media (max-width: 425px) {
+
+    .ventanas img {
+        width: 120%;
+        object-fit: contain;
+    }
+
+    .section-3 {
+        width: 100%;
+        position: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .secciones {
+        padding-top: 0px;
+    }
+    
+    .contenedor-tecnologia {
+        display: none;
+    }
+    
+    .contenedor-comunidades {
+        padding-top: 130px;
+        width: 100%;
+        object-fit: contain;
+        background: rgb(187, 222, 245);
+        background-image: url(../img/fondo_comunidades-mb.jpg);
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .container .card {
+        height: 300px;
+        display: flex;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 5px 20px rgb(0 0 0 / 50%);
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .container .card .content {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0.2s;
+    }
+
+    .inicio {
+        width: 100%;
+        display: flex;
+        height: 100%;
+        flex-wrap: nowrap;
+        padding-top: 94px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .botonera_descarga {        
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .ventanas {
+        width: 45%;
+    }
+
+    .img-section-2-desktop {
+        display: none;
+    }
+
+    .img-section-2-mobile {
+        display: flex;
+    }
+
+    .descarga-cocop {
+        width: 100%;
+    }
+
+    .descarga-cocop-app {
+        width: 65%;
+    }
+
+    .botones img {
+        width: 65px;
+    }
+
+    .titulo_tecnologia {
+        margin-top: 16%;
+    }
+
+    .btn-section-4 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer {
+        width: 100%;
+        height: 15%;
+        background-color: #00d4f0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 10px;
+    }
+
+    .marca {
+        margin-right: 0px;
+    }
+
+    .marca-links {
+        display: flex; ;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .boton {
+        max-width: 300px;
+        width: 100%;
+        padding: 8px 24px;
+        border-radius: 30px;
+        border: none;
+        margin: 10px 0;
+        font-family: Gotham med;
+        font-weight: bold;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+    .pagina_contacto {
+        margin-top: 55%;
+    }
+
+    .conteiner-formulario {
+        padding: 0;
+        padding-bottom: 2%;
+    }
+
+    .contact textarea {
+        height: 160px;
+    }
+    .pliage {
+        width: 25%;
+    }
+
+    .pliage-logo {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
